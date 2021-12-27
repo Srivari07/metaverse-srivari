@@ -1,5 +1,7 @@
 import Image from "next/image";
 import { useMoralis } from "react-moralis";
+import LogoImage from "../asserts/logo.png";
+import BgImage from "../asserts/background.jpg";
 
 function Login() {
   const { authenticate } = useMoralis();
@@ -9,7 +11,7 @@ function Login() {
       <div className="flex flex-col absolute z-10 h-4/6 w-full items-center justify-center space-y-4">
         <Image
           className="object-cover rounded-full"
-          src="https://links.papareact.com/3pi"
+          src={LogoImage}
           height={200}
           width={200}
         />
@@ -21,11 +23,7 @@ function Login() {
         </button>
       </div>
       <div className="w-full h-screen">
-        <Image
-          src="https://links.papareact.com/55n"
-          layout="fill"
-          objectFit="cover"
-        />
+        <Image src={BgImage} layout="fill" objectFit="cover" />
       </div>
     </div>
   );
